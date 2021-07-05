@@ -1,0 +1,11 @@
+@import "reset.css";
+
+/*components*/
+
+/*Screens*/
+@import "screens/welcome.css";
+
+
+* {
+    color: whitesmoke;
+}
