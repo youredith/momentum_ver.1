@@ -29,10 +29,11 @@ body{
     justify-content: center;
 }
 
-#background-img img{
+#background-img--index img{
     width: 99vw;
     height: 99vh;
     object-fit: cover;        
+    position: absolute;
 }
 
 #clock{
