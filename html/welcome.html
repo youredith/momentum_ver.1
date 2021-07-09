@@ -8,15 +8,20 @@
     <title>Hello</title>
 </head>
 <body>
-    <div class="main-screen--welcome">
+    <div class="main-screen">
      <div class="welcome-screen-frame">
         <h1>Hello!</h1>
-        <input type="text" required placeholder="What is your name?" />
+        <form id="login-form">
+            <input type="text" required placeholder="What is your name?" />
+            <hidden></hidden>
+        </form>
      </div>
-     <div class = "background-img">
+     <div id = "background-img">
       <img src = "../img/9.jpg">
      </div>
     </div>
+    
+    <script src = "../js/greetings.js"></script>
     <script src="https://kit.fontawesome.com/6478f529f2.js"
 crossorigin="anonymous"
 ></script>
