@@ -11,18 +11,19 @@
 }
 
 body{
-    background-color: black;     
+    background-color: black;   
 }
 .gradient-cover{
-    width: 99vw;
+    width: 99.8vw;
     height: 99vh; 
     z-index: 1;  
     background: radial-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7));
     position: absolute;
+    top: 0;    
 }
 .main-screen{
-    width: 99vw;
-    height: 99vh;      
+    width: 95vw;
+    height: 95vh;      
     position: relative;    
     display: flex;
     align-items:center;
@@ -30,10 +31,12 @@ body{
 }
 
 #background-img--index img{
-    width: 99vw;
+    width: 99.8vw;
     height: 99vh;
     object-fit: cover;        
     position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #clock{
@@ -47,8 +50,12 @@ body{
     left : 20px;
     z-index: 2; 
 }
-.greeting{
+#greeting{
     position: absolute;
+    top: 5vh;
+    left: 5vh;
+    z-index: 2;
+    font-size: 4vh;
 }
 #quote{
     position: absolute;
@@ -71,5 +78,5 @@ body{
 }
 
 .hidden{
-    display: none;
+    visibility: hidden;
 }

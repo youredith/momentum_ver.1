@@ -1,9 +1,10 @@
-.main-screen--hello{
+#main-screen--hello{
     z-index: 100;
     position: absolute;    
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .welcome-screen-frame{
@@ -11,7 +12,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    flex-direction: column;    
+    flex-direction: column;        
 }
 header{
     font-size: 20vh;    

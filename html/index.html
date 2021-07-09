@@ -8,23 +8,26 @@
     <title>Dev's Momentum</title>
 </head>
 <body>
-  <div class="main-screen--hello">
-        <div class="welcome-screen-frame">
-           <header>Hello!</header>
+  <div id="main-screen--hello">
+        <div class="welcome-screen-frame" class="hidden">
+           <header Id="welcome-string">Hello!</header>
            <form id="login-form">
-               <input type="text" required placeholder="What is your name?" />
-               <hidden></hidden>
+               <input 
+               type="text" 
+               required 
+               maxlength = "10"                
+               placeholder="What is your name?" />  
+               <hidden></hidden>           
            </form>
         </div>
-        <div id = "background-img--hello">
+        <div id = "background-img--hello" >
          <img src = "../img/9.jpg">
         </div>
   </div>  
 
   <div class="main-screen">
-    <h1 id="clock">00:00</h1> 
-    <form id="login-form-index" class="hidden"></form> 
-    <div id="greeting" class="hidden">Hello UnkwonUser</div>
+    <h1 id="clock">00:00</h1>    
+    <div id="greeting"></div>
     <div class="left-pannel">        
         <div class="bgm"></div>
         <div class="menu"></div>        
@@ -32,7 +35,7 @@
     <h2 id="quote">
         <span></span>
         <span></span>
-    </h3>    
+    </h2>    
     <div class="right-pannel">
         <div class="D-day"></div>
         <div class="date"></div>
@@ -41,9 +44,11 @@
         <div class="alarm"></div>
     </div>
     <div class="geolocation"></div>
-    <div id="background-img--hello"></div>
-    <div class="gradient-cover"></div>
+    
   </div>
+  
+    <div id="background-img--index"></div>
+    <div class="gradient-cover"></div>
 
     <script src = "../js/greetings.js"></script>
     <script src = "../js/quotes.js"></script>
