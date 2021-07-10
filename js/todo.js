@@ -19,10 +19,10 @@ function deleteToDo(event){
 
 
 function checkCheckBox(event){
-    const checkCover = event.target.parentElement;
-    console.log(event.target.parentElement);
+    const checkCover = document.getElementById("check-box");    
     checkCover.innerText = "∨";
 }
+
 
 function paintToDo(newToDo){
     const li = document.createElement("li");
@@ -37,6 +37,7 @@ function paintToDo(newToDo){
 
     const createCheckBox = document.createElement("button");
     createCheckBox.setAttribute("id", "check-box");
+    
     const checkBox = document.getElementById("check-box");
     checkBox.innerText = "▢";
     checkBox.addEventListener("click", checkCheckBox);
@@ -44,7 +45,9 @@ function paintToDo(newToDo){
 
     li.appendChild(span);
     li.appendChild(deleteButton);
+    
     li.appendChild(createCheckBox); 
+    
     toDoList.appendChild(li);
 }
 
