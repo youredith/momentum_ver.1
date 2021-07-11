@@ -78,10 +78,10 @@ body{
 .right-pannel{    
     z-index: 2; 
     position: absolute;
-    right: 7vh;
+    right: 5vh;
     top: 5vh;
     height: 80vh;
-    width: 20vw;
+    width: 22vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,11 +93,11 @@ body{
     font-size: 7vh;
     
 }
-.date{
+#today{
     position: absolute;
     top: 9vh;
     font-size: 3vh;
-    
+    z-index: 2;    
 }
 .todo{
     background-color: rgba(245, 245, 245, 0.2);
@@ -127,12 +127,17 @@ body{
 li:hover{
     background-color: rgba(245, 245, 245, 0.4);
 }
+li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;    
+}
 li button{
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     style: none;
-    right: 1vh;
-    margin-top: 0.4vh;
+    right: 1vh;    
     border: none;
     font-weight: 600;    
 }
@@ -147,13 +152,14 @@ li button{
     bottom: 0vh;
     font-size: 3vh;
 }
-.geolocation{
+#geolocation{
     position:absolute;
     z-index:2;
     bottom: 5vh;
     right: 5vh;
     font-size: 2.3vh;
 }
+
 .hidden{
     visibility: hidden;
 }

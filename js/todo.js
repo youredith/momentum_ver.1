@@ -10,18 +10,19 @@ function saveToDos(){
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
-function deleteToDo(event){
+function deleteToDo(event){    
     const li = event.target.parentElement;
     li.remove();
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
 }
 
-
+/*
 function checkCheckBox(event){
     const checkCover = document.getElementById("check-box");    
     checkCover.innerText = "∨";
 }
+*/
 
 
 function paintToDo(newToDo){
@@ -34,19 +35,22 @@ function paintToDo(newToDo){
     deleteButton.innerText = "–";
     deleteButton.addEventListener("click", deleteToDo);
     
+    /*
+    function boxMaker(event){
+        const checkBox = document.getElementById("check-box");
+        checkBox.innerText = "▢";        
+        checkBox.addEventListener("click", checkCheckBox);
+    }
 
-    const createCheckBox = document.createElement("button");
-    createCheckBox.setAttribute("id", "check-box");
     
-    const checkBox = document.getElementById("check-box");
-    checkBox.innerText = "▢";
-    checkBox.addEventListener("click", checkCheckBox);
-
+    const createCheckBox = document.createElement("button");
+    createCheckBox.setAttribute("id", "check-box");    
+    document.addEventListener("DOMContentLoaded",boxMaker);
+    */
 
     li.appendChild(span);
-    li.appendChild(deleteButton);
-    
-    li.appendChild(createCheckBox); 
+    li.appendChild(deleteButton);    
+    // li.appendChild(createCheckBox); 
     
     toDoList.appendChild(li);
 }
