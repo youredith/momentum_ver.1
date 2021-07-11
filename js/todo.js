@@ -17,39 +17,24 @@ function deleteToDo(event){
     saveToDos();
 }
 
-/*
-function checkCheckBox(event){
-    const checkCover = document.getElementById("check-box");    
-    checkCover.innerText = "∨";
-}
-*/
-
 
 function paintToDo(newToDo){
     const li = document.createElement("li");
     li.id = newToDo.id;  
     const span = document.createElement("span");
     span.innerText = newToDo.text;
+    
+    const createCheckBox = document.createElement("input");
+    createCheckBox.setAttribute("id", "check-box");  
+    createCheckBox.setAttribute("type", "checkbox");  
 
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "–";
-    deleteButton.addEventListener("click", deleteToDo);
-    
-    /*
-    function boxMaker(event){
-        const checkBox = document.getElementById("check-box");
-        checkBox.innerText = "▢";        
-        checkBox.addEventListener("click", checkCheckBox);
-    }
-
-    const createCheckBox = document.createElement("button");
-    createCheckBox.setAttribute("id", "check-box");    
-    document.addEventListener("DOMContentLoaded",boxMaker);
-    */
+    deleteButton.addEventListener("click", deleteToDo);            
 
     li.appendChild(span);
     li.appendChild(deleteButton);    
-    // li.appendChild(createCheckBox);     
+    li.appendChild(createCheckBox);     
     toDoList.appendChild(li);
 }
 
@@ -75,4 +60,15 @@ if(savedToDos !== null){
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
+}
+
+//progress
+
+const done = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+function saveCheckedCheckbox(){
+    const checkbox = document.getElementById("check-box");
+    if(check-box.checked){
+        localStorage.setItem("check-box", true);
+    }    
 }
