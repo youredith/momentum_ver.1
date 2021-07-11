@@ -41,11 +41,12 @@
         <div class="d-day">
             <form id="userdate" class="hidden"> 
              <input type="text" placeholder="When is your Due?" onfocus="(this.type='date')"/>
-             <button><i class="fas fa-check-square fa-lg"></i></button>
-            </form>
-            <div id="user-d-day" class="hidden"></div>
+             <button><i class="fas fa-check-square fa-lg"></i></button>             
+            </form>            
+            <div id="user-d-day"></div>
         </div>
         <div id="today"></div>
+        <div id="reset-d-day" data-tooltip-text="D-day"><i class="fas fa-redo-alt"></i></div>
 
         <div class="todo">
             <form id="todo-form">
@@ -53,13 +54,13 @@
             </form>
             <ul id="todo-list"></ul>            
         </div>
-<!---->
+<!--
         <div class="progress">
             <div class="progress-percentage">progress 20%</div>
             <div class="progress-bar"></div>
         </div>
-        <div class="alarm">Alarm set time</div>
-<!---->
+        
+-->
     </div>
     <div id="geolocation">
         <span></span>

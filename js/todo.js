@@ -25,16 +25,18 @@ function paintToDo(newToDo){
     span.innerText = newToDo.text;
     
     const createCheckBox = document.createElement("input");
-    createCheckBox.setAttribute("id", "check-box");  
+    //createCheckBox.setAttribute("id", "check-box"); 
+    createCheckBox.setAttribute("id", `${li.id}`); 
     createCheckBox.setAttribute("type", "checkbox");  
 
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "–";
-    deleteButton.addEventListener("click", deleteToDo);            
+    deleteButton.addEventListener("click", deleteToDo);  
 
+    li.appendChild(createCheckBox);     
     li.appendChild(span);
     li.appendChild(deleteButton);    
-    li.appendChild(createCheckBox);     
+    
     toDoList.appendChild(li);
 }
 
@@ -62,13 +64,48 @@ if(savedToDos !== null){
     parsedToDos.forEach(paintToDo);
 }
 
-//progress
+//check-box
+/*
+const numberOfDone = document.querySelectorAll('input[type="checkbox"]:checked').length;
+const numberOfLi = document.getElementsByTagName("li").length;
+const CHECKBOX_KEY = "check-box-key";
 
-const done = document.querySelectorAll('input[type="checkbox"]:checked').length;
 
-function saveCheckedCheckbox(){
-    const checkbox = document.getElementById("check-box");
-    if(check-box.checked){
-        localStorage.setItem("check-box", true);
+let checkTrues = [];
+
+function saveCheckTrues() {   
+   localStorage.setItem(CHECKBOX_KEY, JSON.stringify(checkTrues));
+}
+
+function judgeCheckBox(){
+    const checkbox = document.querySelectorAll('input[type="checkbox"]');    
+  
+    if(checkbox.value === true){        
+        // localStorage.setItem(CHECKBOX_KEY, true);
+        checkTrues.push(checkbox); //push () in to checkTrues 
+        saveCheckTrues();
+    } else {        
+        uncheckedCheckBox(checkbox);
     }    
 }
+
+function uncheckedCheckBox(event){   
+    const li = event.target.parentElement;
+    checkTrues = checkTrues.filter((checkTrue) => checkTrue.id !== parseInt(li.id));
+    saveCheckTrues();
+}
+
+function loadCheckedCheckbox(){
+    const checked = localStorage.getItem(CHECKBOX_KEY);
+    if (checked == true) {      
+        const parsedCheckTrues = JSON.parse(checked);
+        checkTrues = parsedCheckTrues;  
+        checkTrues.value = true;             
+    }
+}
+
+
+loadCheckedCheckbox();
+checkbox.addEventListener("change",judgeCheckBox);
+*/
+

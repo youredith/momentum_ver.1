@@ -3,6 +3,7 @@ const userDateInput = document.querySelector("#userdate input");
 const userDDay = document.querySelector("#user-d-day");
 const HIDDEN_CLASSNAME1 = "hidden";
 const SUBMITTED_DATE_KEY = "submitted-date";
+const resetBtn = document.querySelector("#reset-d-day");
 
 function dDay(event) {
   event.preventDefault();
@@ -32,3 +33,13 @@ if(savedUserDate === null){
 } else {
   paintDDay(savedUserDate);
 }
+
+
+function resetDDay(){
+  //empty localstorage and refresh the page
+  localStorage.removeItem(SUBMITTED_DATE_KEY);
+  location.reload();
+}
+
+resetBtn.addEventListener("click",resetDDay);
+
