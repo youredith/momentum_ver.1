@@ -8,7 +8,7 @@
     <title>Dev's Momentum</title>
 </head>
 <body>
-    <!--
+
   <div id="main-screen--hello">
         <div class="welcome-screen-frame" class="hidden">
            <header Id="welcome-string">Hello!</header>
@@ -25,7 +25,7 @@
          <img src = "../img/9.jpg">
         </div>
   </div>
--->
+
   <div class="main-screen">
     <h1 id="clock">00:00</h1>    
     <div id="greeting"></div>
@@ -40,8 +40,8 @@
     <div class="right-pannel">
         <div class="d-day">
             <form id="userdate" class="hidden"> 
-             <input type="date"/>
-             <button>Submit</button>
+             <input type="text" placeholder="When is your Due?" onfocus="(this.type='date')"/>
+             <button><i class="fas fa-check-square fa-lg"></i></button>
             </form>
             <div id="user-d-day" class="hidden"></div>
         </div>
@@ -53,12 +53,13 @@
             </form>
             <ul id="todo-list"></ul>            
         </div>
-
+<!---->
         <div class="progress">
             <div class="progress-percentage">progress 20%</div>
             <div class="progress-bar"></div>
         </div>
         <div class="alarm">Alarm set time</div>
+<!---->
     </div>
     <div id="geolocation">
         <span></span>

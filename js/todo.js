@@ -42,7 +42,6 @@ function paintToDo(newToDo){
         checkBox.addEventListener("click", checkCheckBox);
     }
 
-    
     const createCheckBox = document.createElement("button");
     createCheckBox.setAttribute("id", "check-box");    
     document.addEventListener("DOMContentLoaded",boxMaker);
@@ -50,8 +49,7 @@ function paintToDo(newToDo){
 
     li.appendChild(span);
     li.appendChild(deleteButton);    
-    // li.appendChild(createCheckBox); 
-    
+    // li.appendChild(createCheckBox);     
     toDoList.appendChild(li);
 }
 
